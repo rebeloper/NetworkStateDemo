@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import NetworkState
 
 @main
 struct NetworkStateDemoApp: App {
+    
+    let networkState = NetworkState()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(networkState)
         }
     }
 }

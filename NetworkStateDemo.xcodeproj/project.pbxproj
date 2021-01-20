@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		C9CC05F725B8932D00129E5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC05F625B8932D00129E5A /* ContentView.swift */; };
 		C9CC05F925B8933000129E5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CC05F825B8933000129E5A /* Assets.xcassets */; };
 		C9CC05FC25B8933000129E5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CC05FB25B8933000129E5A /* Preview Assets.xcassets */; };
+		C9CC060625B8937600129E5A /* NetworkState in Frameworks */ = {isa = PBXBuildFile; productRef = C9CC060525B8937600129E5A /* NetworkState */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CC060625B8937600129E5A /* NetworkState in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = NetworkStateDemo;
+			packageProductDependencies = (
+				C9CC060525B8937600129E5A /* NetworkState */,
+			);
 			productName = NetworkStateDemo;
 			productReference = C9CC05F125B8932D00129E5A /* NetworkStateDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +117,9 @@
 				Base,
 			);
 			mainGroup = C9CC05E825B8932D00129E5A;
+			packageReferences = (
+				C9CC060425B8937600129E5A /* XCRemoteSwiftPackageReference "NetworkState" */,
+			);
 			productRefGroup = C9CC05F225B8932D00129E5A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -328,6 +336,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9CC060425B8937600129E5A /* XCRemoteSwiftPackageReference "NetworkState" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rebeloper/NetworkState.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9CC060525B8937600129E5A /* NetworkState */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9CC060425B8937600129E5A /* XCRemoteSwiftPackageReference "NetworkState" */;
+			productName = NetworkState;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9CC05E925B8932D00129E5A /* Project object */;
 }

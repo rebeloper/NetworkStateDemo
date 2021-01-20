@@ -6,11 +6,33 @@
 //
 
 import SwiftUI
+import NetworkState
 
 struct ContentView: View {
+    
+    @EnvironmentObject var networkState: NetworkState
+    
+    @State var isOnline = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(spacing: 12) {
+            Image(systemName: networkState.isOnline ? "wifi" : "wifi.slash").font(.largeTitle)
+            
+            Button(action: {
+                if let isConnected = networkState.isConnected(), isConnected {
+                    isOnline = isConnected
+                } else {
+                    isOnline = false
+                }
+            }, label: {
+                Text("Refresh manually")
+            })
+            
+            if isOnline {
+                Text("Showing this text only after we tapped the Button and if network is Connected")
+            }
+            
+        }
     }
 }
 
